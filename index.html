@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Where does it all go? Bath Spa University Budget</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+    // Load the Visualization API and the piechart package.
+    google.load('visualization', '1.0', {'packages':['corechart']});
+
+    // Set a callback to run when the Google Visualization API is loaded.
+      google.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data1 = new google.visualization.DataTable();
+        data1.addColumn('string', 'Income');
+        data1.addColumn('number', 'Amount');
+        data1.addRows([
+        	['Funding Council grants', 14431],
+        	['Tuition fees and education contracts', 32467],
+        	['Research grants and contracts', 527],
+        	['Other income', 4495],
+        	['Net investment income', 606]
+        	]);
+        var data11 = new google.visualization.arrayToDataTable([
+        	['', 'Funding Council grants', 'Tuition fees and education contracts', 'Research grants and contracts', 'Other income', 'Net investment income'],
+        	['', 14431, 32467, 527, 4495, 606],
+        	]);
+        var data2 = new google.visualization.DataTable();
+        data2.addColumn('string', 'Expense');
+        data2.addColumn('number', 'Amount');
+        data2.addRows([
+        	['Staff costs', 27223],
+        	['Other operating expenses', 22161],
+        	['Depreciation', 1842],
+        	['Interest payable', 420]
+        	]);
+        var data22 = new google.visualization.arrayToDataTable([
+        	['', 'Staff costs', 'Other operating expenses', 'Depreciation', 'Interest payable'],
+        	['', 27223, 22161, 1842, 420],
+        	]);
+        var data3 = new google.visualization.DataTable();
+        data3.addColumn('string', 'Activity');
+        data3.addColumn('number', 'Amount');
+        data3.addRows([
+          ['Academic departments', 16542],
+          ['Academic services', 2740],
+          ['Research grants and contracts', 327],
+          ['Residences, catering and conferences', 625],
+          ['General education expenditure', 1222],
+          ['Premises', 1340],
+          ['Adminstration', 3360],
+          ['Staff and student services', 1028],
+          ['Other expenses', 39]
+        ]);
+        var data33 = new google.visualization.arrayToDataTable([
+        	['', 'Academic departments', 'Academic services', 'Research grants and contracts', 'Residences, catering and conferences', 'General education expenditure', 'Premises', 'Adminstration', 'Staff and student services', 'Other expenses'],
+        	['', 16542, 2740, 327, 625, 1222, 1340, 3360, 1028, 39],
+        	]);
+
+        // Set chart options
+        var options1 = {'title':'Income, in £,000',
+        				'width':700,
+        				'height':600};
+        var options2 = {'title':'Expenses, in £,000',
+        				'width':700,
+        				'height':600};
+        var options3 = {'title':'Expenses by Activity, in £,000',
+                       'width':700,
+                       'height':600};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.BarChart(document.getElementById('bar_chart_div_inc'));
+        chart.draw(data11, options1);
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div_inc'));
+        chart.draw(data1, options1);
+        var chart = new google.visualization.BarChart(document.getElementById('bar_chart_div_exp'));
+        chart.draw(data22, options2);
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div_exp'));
+        chart.draw(data2, options2);
+        var chart = new google.visualization.BarChart(document.getElementById('bar_chart_div_expbyact'));
+        chart.draw(data33, options3);
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div_expbyact'));
+        chart.draw(data3, options3);
+       
+    }
+    </script>
+    
+  </head>
+  <body>
+    <h1>Where does it all go? Bath Spa University Budget</h1>
+    <ul>
+    	<li><a href="#inc">Income</a></li>
+    	<li><a href="#exp">Expenses</a></li>
+    	<li><a href="#expbyact">Expenses by Activity</a></li>
+    </ul>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <h2 id="inc">Income</h2>
+    <!--Div that will hold the income bar chart-->
+    <div id="bar_chart_div_inc"></div>
+    <!--Div that will hold the income pie chart-->
+    <div id="chart_div_inc"></div>
+    <p>Total income for 2013 was £52,526,000</p>
+    <h3 id="exp">Expenses</h3>
+    <!--Div that will hold the expenses bar chart-->
+    <div id="bar_chart_div_exp"></div>
+    <!--Div that will hold the expenses pie chart-->
+    <div id="chart_div_exp"></div>
+    <p>Total expenses for 2013 was £51,646,000</p>
+    <h4 id="expbyact">Expenses by Activity</h4>
+    <!--Div that will hold the expenses by activity bar chart-->
+    <div id="bar_chart_div_expbyact"></div>
+    <!--Div that will hold the expenses by activity pie chart-->
+    <div id="chart_div_expbyact"></div>
+    
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
