@@ -4,13 +4,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Where does it all go? Bath Spa University Budget</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom style for this template -->
+    <link rel="stylesheet" href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css">
+
     <!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
+    
     // Load the Visualization API and the piechart package.
     google.load('visualization', '1.0', {'packages':['corechart']});
 
@@ -99,33 +105,49 @@
     
   </head>
   <body>
-    <h1>Where does it all go? Bath Spa University Budget</h1>
-    <ul>
-    	<li><a href="#inc">Income</a></li>
-    	<li><a href="#exp">Expenses</a></li>
-    	<li><a href="#expbyact">Expenses by Activity</a></li>
-    </ul>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <h2 id="inc">Income</h2>
-    <!--Div that will hold the income bar chart-->
-    <div id="bar_chart_div_inc"></div>
-    <!--Div that will hold the income pie chart-->
-    <div id="chart_div_inc"></div>
-    <p>Total income for 2013 was £52,526,000</p>
-    <h3 id="exp">Expenses</h3>
-    <!--Div that will hold the expenses bar chart-->
-    <div id="bar_chart_div_exp"></div>
-    <!--Div that will hold the expenses pie chart-->
-    <div id="chart_div_exp"></div>
-    <p>Total expenses for 2013 was £51,646,000</p>
-    <h4 id="expbyact">Expenses by Activity</h4>
-    <!--Div that will hold the expenses by activity bar chart-->
-    <div id="bar_chart_div_expbyact"></div>
-    <!--Div that will hold the expenses by activity pie chart-->
-    <div id="chart_div_expbyact"></div>
-    
 
+  	<div class="container">
+  		<div class="header">
+  			<nav>
+  				<ul class="nav nav-pills pull-right">
+  					<li role="presentation"><a href="#inc">Income</a></li>
+  					<li role="presentation"><a href="#exp">Expenses</a></li>
+  					<li role="presentation"><a href="#expbyact">Expenses by Activity</a></li>
+  				</ul>
+  			</nav>
+  			<h3 class="text-muted">Bath Spa University Budget</h3>
+  		</div>
+
+  		<div class="row marketing">
+  			<div class="col-lg-6">
+  				<h2 id="inc">Income</h2>
+    			<!--Div that will hold the income bar chart-->
+    			<div id="bar_chart_div_inc"></div>
+    			<!--Div that will hold the income pie chart-->
+    			<div id="chart_div_inc"></div>
+    			<p>Total income for 2013 was £52,526,000</p>
+    			<h3 id="exp">Expenses</h3>
+    			<!--Div that will hold the expenses bar chart-->
+    			<div id="bar_chart_div_exp"></div>
+    			<!--Div that will hold the expenses pie chart-->
+    			<div id="chart_div_exp"></div>
+    			<p>Total expenses for 2013 was £51,646,000</p>
+    			<h4 id="expbyact">Expenses by Activity</h4>
+    			<!--Div that will hold the expenses by activity bar chart-->
+    			<div id="bar_chart_div_expbyact"></div>
+    			<!--Div that will hold the expenses by activity pie chart-->
+    			<div id="chart_div_expbyact"></div>
+  			</div>
+  		</div>
+
+  		<footer class="footer">
+  			<p>A Jesse Stewart Production</p>
+  		</footer>
+
+  	</div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
   </body>
