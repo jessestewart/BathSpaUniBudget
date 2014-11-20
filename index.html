@@ -102,14 +102,18 @@
        
     }
     </script>
-    
+    <style>
+    	body {
+    		position: relative;
+    	}
+    </style>
   </head>
-  <body>
+  <body data-spy="scroll" data-target=".navbar-example">
 
   	<div class="container">
   		<div class="header">
   			<nav>
-  				<ul class="nav nav-pills pull-right">
+  				<ul class="nav nav-pills pull-right" role="tablist">
   					<li role="presentation"><a href="#inc">Income</a></li>
   					<li role="presentation"><a href="#exp">Expenses</a></li>
   					<li role="presentation"><a href="#expbyact">Expenses by Activity</a></li>
