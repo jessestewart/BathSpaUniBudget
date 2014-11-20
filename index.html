@@ -30,27 +30,34 @@
 
         // Create the data table.
         var data1 = new google.visualization.DataTable();
-        data1.addColumn('string', 'Income');
+        data1.addColumn('string', 'Year');
         data1.addColumn('number', 'Amount');
         data1.addRows([
-        	['Funding Council grants', 14431],
-        	['Tuition fees and education contracts', 32467],
-        	['Research grants and contracts', 527],
-        	['Other income', 4495],
-        	['Net investment income', 606]
+        	['2013', 52,526],
+        	['2012', 48,686],
+        	['2011', 51,564],
+        	['2010', 50,558],
+        	['2009', 50,441],
+        	['2008', 44,833],
+        	['2007', 38,804],
+        	['2006', 34,055]
         	]);
         var data11 = new google.visualization.arrayToDataTable([
         	['', 'Funding Council grants', 'Tuition fees and education contracts', 'Research grants and contracts', 'Other income', 'Net investment income'],
         	['', 14431, 32467, 527, 4495, 606],
         	]);
         var data2 = new google.visualization.DataTable();
-        data2.addColumn('string', 'Expense');
+        data2.addColumn('string', 'Year');
         data2.addColumn('number', 'Amount');
         data2.addRows([
-        	['Staff costs', 27223],
-        	['Other operating expenses', 22161],
-        	['Depreciation', 1842],
-        	['Interest payable', 420]
+        	['2013', 51,646],
+        	['2012', 45,251],
+        	['2011', 44,278],
+        	['2010', 44,556],
+        	['2009', 48,863],
+        	['2008', 41,506],
+        	['2007', 37,590],
+        	['2006', 34,433]
         	]);
         var data22 = new google.visualization.arrayToDataTable([
         	['', 'Staff costs', 'Other operating expenses', 'Depreciation', 'Interest payable'],
@@ -139,6 +146,12 @@
     			<!--Div that will hold the expenses by activity pie chart-->
     			<div id="chart_div_expbyact"></div>
     			<p><a href="https://www2.bathspa.ac.uk/services/finance/financial-statements/bsufs13.pdf">Bath Spa University 2013 Annual Report</a></p>
+    			<p><a href="https://www2.bathspa.ac.uk/services/finance/financial-statements/bsufs12.pdf">2012 Annual Report</a></p>
+    			<p><a href="https://www2.bathspa.ac.uk/services/finance/financial-statements/bsufs11.pdf">2011 Annual Report</a></p>
+    			<p><a href="https://www2.bathspa.ac.uk/services/finance/financial-statements/bsufs10.pdf">2010 Annual Report</a></p>
+    			<p><a href="https://www2.bathspa.ac.uk/services/finance/financial-statements/bsufs09.pdf">2009 Annual Report</a></p>
+    			<p><a href="https://www2.bathspa.ac.uk/services/finance/financial-statements/bsufs08.pdf">2008 Annual Report</a></p>
+    			<p><a href="https://www2.bathspa.ac.uk/services/finance/financial-statements/bsufs07.pdf">2007 Annual Report</a></p>
   			</div>
   		</div>
 
