@@ -68,15 +68,27 @@
         	]);
 
         // Set chart options
-        var options1 = {'title':'Income, in £,000',
-        				'width':700,
-        				'height':600};
-        var options2 = {'title':'Expenses, in £,000',
-        				'width':700,
-        				'height':600};
-        var options3 = {'title':'Expenses by Activity, in £,000',
-                       'width':700,
-                       'height':600};
+        var options1 = {
+          title: 'Income, in £,000',
+          hAxis: {minValue:0},
+        				  width: 700,
+        				  height: 600,
+                  legend: {position: 'right', textStyle: {color: 'black', fontSize: 12}}
+        };
+        var options2 = {
+          title: 'Expenses, in £,000',
+        	hAxis: {minValue:0},
+        	        width: 700,
+        				  height: 600,
+                  legend: {position: 'right', textStyle: {color: 'black', fontSize: 12}}
+        };
+        var options3 = {
+          title: 'Expenses by Activity, in £,000',
+          hAxis:  {minValue:0},
+                  width: 700,
+                  height: 600,
+                  legend: {position: 'right', textStyle: {color: 'black', fontSize: 12}}
+        };
 
         // Instantiate and draw our chart, passing in some options.
         var chart = new google.visualization.BarChart(document.getElementById('bar_chart_div_inc'));
@@ -139,15 +151,10 @@
     			<div id="chart_div_expbyact" style="height:600px; width:700px"></div>
     		</div>
     		
-    			<p><a href="https://www2.bathspa.ac.uk/services/finance/financial-statements/bsufs13.pdf">Bath Spa University 2013 Annual Report</a></p>
-    			<p><a href="https://www2.bathspa.ac.uk/services/finance/financial-statements/bsufs12.pdf">2012 Annual Report</a></p>
-    			<p><a href="https://www2.bathspa.ac.uk/services/finance/financial-statements/bsufs11.pdf">2011 Annual Report</a></p>
-    			<p><a href="https://www2.bathspa.ac.uk/services/finance/financial-statements/bsufs10.pdf">2010 Annual Report</a></p>
-    			<p><a href="https://www2.bathspa.ac.uk/services/finance/financial-statements/bsufs09.pdf">2009 Annual Report</a></p>
-    			<p><a href="https://www2.bathspa.ac.uk/services/finance/financial-statements/bsufs08.pdf">2008 Annual Report</a></p>
-    			<p><a href="https://www2.bathspa.ac.uk/services/finance/financial-statements/bsufs07.pdf">2007 Annual Report</a></p>
   		</div>
   	</div>
+  	
+  	<p><a href="https://www2.bathspa.ac.uk/services/finance/financial-statements/">Bath Spa University Financial Statements</a></p>
   		<footer class="footer">
   			<p>A Jesse Stewart Production</p>
   		</footer>
