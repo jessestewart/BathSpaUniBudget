@@ -107,9 +107,6 @@
         chart.draw(data3, options3);
        
     }
-    $(window).resize(function(){
-    	drawChart();
-    });
     </script>
     
   </head>
@@ -131,22 +128,28 @@
   			<div class="col-lg-6">
   			<h3>In 2013 the University earned £52,526,000 and spent £51,646,000.</h3>
   			<h2 id="inc">Income</h2>
-    			<!--Div that will hold the income bar chart-->
-    			<div id="bar_chart_div_inc"></div>
+  			<div>
+    		  <!--Div that will hold the income bar chart-->
+    			<div id="bar_chart_div_inc" style="height:600px; width:700px;"></div>
     			<!--Div that will hold the income pie chart-->
-    			<div id="chart_div_inc"></div>
+    			<div id="chart_div_inc" style="height:600px; width:700px"></div>
     			<p>Total income for 2013 was £52,526,000</p>
-    			<h3 id="exp">Expenses</h3>
+    		</div>
+    		<h3 id="exp">Expenses</h3>
+    		<div>
     			<!--Div that will hold the expenses bar chart-->
-    			<div id="bar_chart_div_exp"></div>
+    			<div id="bar_chart_div_exp" style="height:600px; width:700px;"></div>
     			<!--Div that will hold the expenses pie chart-->
-    			<div id="chart_div_exp"></div>
+    			<div id="chart_div_exp" style="height:600px; width:700px"></div>
     			<p>Total expenses for 2013 was £51,646,000</p>
-    			<h4 id="expbyact">Expenses by Activity</h4>
+    		</div>
+    		<h4 id="expbyact">Expenses by Activity</h4>
+    		<div>
     			<!--Div that will hold the expenses by activity bar chart-->
-    			<div id="bar_chart_div_expbyact"></div>
+    			<div id="bar_chart_div_expbyact" style="height:600px; width:700px;"></div>
     			<!--Div that will hold the expenses by activity pie chart-->
-    			<div id="chart_div_expbyact"></div>
+    			<div id="chart_div_expbyact" style="height:600px; width:700px"></div>
+    		</div>
     			<p><a href="https://www2.bathspa.ac.uk/services/finance/financial-statements/bsufs13.pdf">Bath Spa University 2013 Annual Report</a></p>
     			<p><a href="https://www2.bathspa.ac.uk/services/finance/financial-statements/bsufs12.pdf">2012 Annual Report</a></p>
     			<p><a href="https://www2.bathspa.ac.uk/services/finance/financial-statements/bsufs11.pdf">2011 Annual Report</a></p>
